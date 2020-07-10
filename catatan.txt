@@ -76,6 +76,13 @@ Yang dikasih page scrool:
 Semua nav dari 1 - 4
 Ada button contact developer di about
 
+Gw kerjain add new recipe, form dan favourite recipe
+
+
+Form :
+1. name
+2. ingredient = array of object{ name, amount }
+
 
 
 

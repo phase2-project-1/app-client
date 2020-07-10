@@ -13,7 +13,7 @@
 
     <title>Toyip Team</title>
   </head>
-  <body>
+  <body id="#body">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
@@ -37,8 +37,15 @@
                     <a id="contact-nav" class="nav-link page-scroll" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a id="crud-nav" class="nav-link page-scroll" href="#crud-page">CRUD</a>
+                    <a id="crud-nav" class="nav-link page-scroll" href="#crud-page">Recipe</a>
                 </li>
+                <li class="nav-item">
+                    <a id="my-favourite-recipe" class="nav-link page-scroll" href="#favourite">Favourite</a>
+                </li>
+                <li class="nav-item">
+                    <a id="add-new-recipe-nav" class="nav-link page-scroll" href="#add">Add</a>
+                </li>
+                
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 
@@ -68,7 +75,7 @@
                           <input type="password" class="form-control" id="password-login">
                         </div>
                         
-                        <button type="submit" class="btn btn-primary" style="font-weight: 900; font-size: 28px; float: right;">Login</button>
+                        <button type="submit" class="btn btn-primary button-i">Login</button>
                       </form>
                       
                 </div>
@@ -100,7 +107,7 @@
                           <label for="password-register">Password</label>
                           <input type="password" class="form-control" id="password-register">
                         </div>
-                        <button type="submit" class="btn btn-primary" style="font-weight: 900; font-size: 28px; float: right;">Register</button>
+                        <button type="submit" class="btn btn-primary button-i" >Register</button>
                       </form>
                 </div>
             </div>
@@ -316,7 +323,192 @@
 
     <!-- CRUD Page -->
     <div id="crud-page" class="crud-page" >
-        <h1>Hello World</h1>
+        <!-- Jumbotron Recipe -->
+        <div class="jumbotron">
+            <!-- Resep kita  -->
+            <div class="container text-center" style="padding-top: 60px;">
+                <p class="brand">Resep <span style="color: tomato;">Kita</span></p>
+                
+                <div class="row">
+                    <div class="col-sm-8 offset-sm-2">
+                        <form id="form-search" class="form" style="background-color: transparent;">
+                            <div class="form-group">
+                                <!-- <label for="input-query">Search Bar</label> -->
+                                <p class="paragraf">Lorem ipsum dolor sic hlasamet adipisicing elitim. Oty facilis distinctio modi fugit iste atque eveniet quas no valspernatur iusto blanditiis, quasi officiis commodi. Explicabo hic libero dolorem velit saepe.</p>
+                                <input type="text" class="form-control" id="input-query" aria-describedby="emailHelp">
+                            </div>
+                            <button type="submit" class="btn btn-danger button-i" style="float: none;">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- search bar -->
+            
+            
+
+        </div>
+
+        <!-- Hasil Searching -->
+        <div id="searching" class="container" style="margin-bottom: 60px;">
+            <h1 class="subjudul">Result</h1>
+            <!-- Nanti bakal di append -->
+            <div id="result-search" class="row">
+                <!-- <div class="col-sm-4" style="margin-bottom: 40px;">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/img/2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- New Recipe -->
+        <div id="new" class="container" style="margin-bottom: 60px;">
+            <h1 class="subjudul" >New Recipe</h1>
+            <!-- Nanti bakal di append -->
+            <div id="new-recipe-api" class="row">
+                
+            </div>
+        </div>
+
+        <!-- My favourite -->
+        <div id="favourite" class="container" style="margin-bottom: 60px;">
+            <h1 class="subjudul">My Favourite</h1>
+            <!-- Nanti bakal di append -->
+            <div class="row">
+                <div class="col-sm-4" style="margin-bottom: 40px;">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/img/2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/img/2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/img/2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/img/2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/img/2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/img/2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Buat recipe -->
+        <div id="add" class="container" style="margin-top:60px ; margin-bottom: 170px;">
+            <div class="row">
+                <div class="form col-sm-8 offset-sm-2" >
+                    <h1 style="font-family: 'Kaushan Script', cursive;"><p class="brand">Resep <span style="color: tomato;">Kita</span></p></h1>
+                    <form id="form-add">
+                        <div class="form-group">
+                            <label for="recipe-name">Recipe name</label>
+                            <input type="text" class="form-control" id="recipe-name">
+                        </div>
+                        <!-- Form Row -->
+                        <div class="form-row">
+                            <div class="form-group col-md-8">
+                              <label for="ingredient">Ingredient</label>
+                              <input type="text" class="form-control" id="ingredient1">
+                            </div>
+                            <div class="form-group col-md-4">
+                              <label for="amount1">Amount</label>
+                              <input type="text" class="form-control" id="amount1">
+                            </div>
+                            <div class="form-group col-md-8">
+                                <input type="text" class="form-control" id="ingredient2">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <input type="text" class="form-control" id="amount2">
+                            </div>
+                            <div class="form-group col-md-8">
+                                <input type="text" class="form-control" id="ingredient3">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <input type="text" class="form-control" id="amount3">
+                            </div>
+
+                        </div>
+                          
+                        <div class="form-group">
+                            <label for="imageurl">Image Url Link</label>
+                            <input type="text" class="form-control" id="imageurl">
+                        </div>
+                        
+                        
+                        <button type="submit" class="btn btn-danger" style="float: right;">Create Recipe</button>
+                        <a id="reset-form-button" class="btn btn-danger" style="float: right; margin-right: 20px;">Reset</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer" class="footer">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p>&copy; Copyright 2020 | built by.Ichlasul Amal, Timothi dan Noval</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
     </div>
     
 
